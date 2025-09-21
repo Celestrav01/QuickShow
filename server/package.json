@@ -22,8 +22,8 @@
     "inngest": "^3.41.0",
     "mongoose": "^8.16.3",
     "nodemailer": "^7.0.5",
-    "stripe": "^18.3.0",
-    "svix": "^1.69.0"
+    "stripe": "^18.5.0",
+    "svix": "^1.76.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"

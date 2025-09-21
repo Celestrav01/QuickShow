@@ -13,7 +13,7 @@ const movieSchema = new Schema({
     genres: { type: Array, required: true },
     casts: { type: Array, required: true },
     averageRating: { type: Number},
-    runtime: { type: Number},
+    runtime: { type: Number, required: true},
     numVotes: { type: Number}
 }, { timestamps: true })
 
