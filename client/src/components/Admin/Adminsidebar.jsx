@@ -1,7 +1,9 @@
 import { useState } from 'react'
-import { assets } from '../assets/assets'
+import { assets } from '../../assets/assets';
 import { LayoutDashboardIcon, ListCollapseIcon, ListIcon, MenuIcon, PlusCircleIcon, XIcon } from 'lucide-react'
 import { NavLink } from 'react-router-dom';
+
+
 
 const Adminsidebar = () => {
     const [isOpen, setisOpen] = useState(false);
@@ -44,3 +46,14 @@ const Adminsidebar = () => {
 }
 
 export default Adminsidebar
+
+
+// const Adminsidebar= () =>{
+//   return(
+//     <div>
+//     <h1>Sidebar</h1>
+//     </div>
+//   )
+// }
+
+// export default Adminsidebar

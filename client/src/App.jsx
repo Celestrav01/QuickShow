@@ -29,19 +29,19 @@ const App = () => {
         <Route exact path="/movies" element={<Movies />} />
         <Route exact path="/movies/:id" element={<Moviedetails />} />
         <Route exact path="/movies/:id/:date" element={<SeatLayout />} />
-        <Route exact path="/my-bookings" element={<MyBooking />} />
+        <Route exact path="/MyBookings" element={<MyBooking />} />
         <Route exact path="/loading/:nextUrl" element={<Loading/>} />
         <Route exact path="/favourites" element={<Favourite />} />
-      <Route exact path="/admin/*" element={user ? <Layout/> : (
-        <div className='min-h-screen flex items-center justify-center'>
+        <Route exact path="/admin/*" element={user ? <Layout/> : (
+         <div className='min-h-screen flex items-center justify-center'>
           <SignIn fallbackRedirectUrl={'/admin'}/>
-        </div>
-      )}>
+         </div>
+         )}>
           <Route index element={<Dashboard/>}/>
           <Route exact path="add-shows" element={<Addshow/>}/>
           <Route exact path="list-shows" element={<Listshow/>}/>
           <Route exact path="list-bookings" element={<Listbookings/>}/>
-      </Route>
+        </Route>
       </Routes>
       {!isadminpanel && <Footer />}
     </>

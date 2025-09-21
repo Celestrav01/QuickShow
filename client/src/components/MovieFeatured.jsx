@@ -1,8 +1,9 @@
 import { ArrowRight } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import BlurCircle from './BlurCircle';
-import MovieCard from './MovieCard';
+import MovieCard from './Moviecard';
 import { useAppContext } from '../context/Appcontext';
+import { dummyShowsData } from '../assets/assets';
 
 const MovieFeatured = () => {
   const {shows} = useAppContext();
@@ -16,8 +17,8 @@ const MovieFeatured = () => {
           <ArrowRight className='w-4 h-4 group-hover:translate-x-0.5 transition'/>
         </button>
        </div>
-       <div className=' flex flex-wrap max-sm: justify-center gap-8 mt-8'>
-         {shows?.filter(Boolean).slice(0,4).map((show) => {
+       <div className=' flex flex-wrap max-sm: justify-center gap-6 mt-5'>
+         {dummyShowsData.slice(0,4).map((show) => {
            return <MovieCard key={show._id} movie={show}/> 
          })}
        </div>

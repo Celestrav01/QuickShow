@@ -3,10 +3,10 @@ import BlurCircle from './BlurCircle';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 
-const DateSelect = ({ datetime, id }) => {
+const DateSelect = ({ dateTime, id }) => {
   const navigate = useNavigate();
   const [selected, setSelected] = useState(null);
-
+  console.log("This is date time: ", dateTime)
   const onDateCheck = () => {
     if (!selected) {
       toast.error('Please choose a date');
@@ -25,7 +25,7 @@ const DateSelect = ({ datetime, id }) => {
           <p className="text-lg font-semibold mb-8 max-md:text-center">Choose Date</p>
           <div className="flex items-center gap-4 overflow-x-auto no-scrollbar">
             <div className="flex gap-4 min-w-0 min-md:max-w-90 overflow-scroll no-scrollbar max-md:gap-2">
-              {Object.keys(datetime).map((date) => {
+              {Object.keys(dateTime).map((date) => {
                 const d = new Date(date);
                 return (
                   <button

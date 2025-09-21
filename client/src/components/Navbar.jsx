@@ -19,7 +19,9 @@ const Navbar = () => {
         <XIcon className='min-md:hidden absolute top-6 right-6 w-8 h-8 cursor-pointer' onClick={() => { setisOpen(false) }} />
         <Link to="/" onClick={() => { scrollTo(0,0); setisOpen(false) }} className='hover:text-primary'>Home</Link>
         <Link to="/movies" onClick={() => { scrollTo(0,0); setisOpen(false) }} className='hover:text-primary'>Movies</Link>
-        {favorites.length > 0 && <Link to="/favourites" onClick={() => { scrollTo(0,0); setisOpen(false) }} className='hover:text-primary'>Favourite</Link>}
+       <Link to="/favourites" onClick={() => { scrollTo(0,0); setisOpen(false) }} 
+className='hover:text-primary'>Favourite</Link>
+
         <Link to="/my-bookings" onClick={() => { scrollTo(0,0); setisOpen(false) }} className='hover:text-primary'>Bookings</Link>
         <Link to="/admin" onClick={() => { scrollTo(0,0); setisOpen(false) }} className='text-primary'>Dashboard</Link>
       </div>

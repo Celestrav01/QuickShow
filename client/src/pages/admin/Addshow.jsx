@@ -72,7 +72,7 @@ const Addshow = () => {
 
   const handleadd = async () => {
     try {
-      if (!selectedMovie || !showprice) {
+      if (!selectedMovie || object.keys(dateTimeSelection).length === 0 ||  !showprice) {
         return toast.error('Missing required fields')
       }
       const showsInput = Object.entries(dateTimeSelection).flatMap(([date, times]) =>
